@@ -6,6 +6,6 @@ import lombok.Getter;
 @Getter
 @Builder
 public class GetLocationResponseDto {
-    private String x;
-    private String y;
+    private Float x;
+    private Float y;
 }

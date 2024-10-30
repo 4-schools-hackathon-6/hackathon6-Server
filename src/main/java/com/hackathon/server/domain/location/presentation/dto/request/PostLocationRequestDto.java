@@ -6,6 +6,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class PostLocationRequestDto {
-    private String x;
-    private String y;
+    private Float x;
+    private Float y;
 }

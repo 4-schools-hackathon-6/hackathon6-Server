@@ -18,9 +18,9 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String x;
+    private Float x;
 
-    private String y;
+    private Float y;
 
     @ManyToOne
     @JoinColumn
