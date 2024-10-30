@@ -1,8 +1,6 @@
 package com.hackathon.server.domain.call.service.impl;
 
-import com.hackathon.server.domain.call.domain.Calls;
 import com.hackathon.server.domain.call.presentation.dto.response.PushScallReponse;
-import com.hackathon.server.domain.call.repository.CallRepository;
 import com.hackathon.server.domain.call.service.PushService;
 import com.hackathon.server.domain.user.entity.User;
 import com.hackathon.server.domain.user.repository.UserRepository;
