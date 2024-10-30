@@ -64,6 +64,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("/user/**").permitAll()
                                 .requestMatchers("/location/**").authenticated()
+                                .requestMatchers("/reservation/**").authenticated()
                                 .requestMatchers("/chatgpt/**").permitAll()
                                 .requestMatchers("device/**").permitAll()
                                 .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
