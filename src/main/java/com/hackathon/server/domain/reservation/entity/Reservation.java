@@ -31,7 +31,7 @@ public class Reservation {
     private Float radius;
 
     @Enumerated(EnumType.STRING)
-    private Kind kind; // 기기 종류
+    private ReservationType type; // 기기 종류
 
     @ManyToOne
     @JoinColumn

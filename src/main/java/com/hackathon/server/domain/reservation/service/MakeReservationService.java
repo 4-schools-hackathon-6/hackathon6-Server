@@ -30,7 +30,7 @@ public class MakeReservationService {
                 .x(dto.getX())
                 .y(dto.getY())
                 .repetition(dto.getRepetition())
-                .kind(dto.getKind())
+                .type(dto.getType())
                 .user(user)
                 .build();
 

@@ -1,6 +1,6 @@
 package com.hackathon.server.domain.reservation.presentation.dto.request;
 
-import com.hackathon.server.domain.reservation.entity.Kind;
+import com.hackathon.server.domain.reservation.entity.ReservationType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -12,5 +12,5 @@ public class MakeReservationRequestDto {
     private Boolean repetition;
     private Float x;
     private Float y;
-    private Kind kind;
+    private ReservationType type;
 }
