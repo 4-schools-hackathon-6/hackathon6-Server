@@ -3,10 +3,16 @@ spring:
     url: ${DB_URL}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
 
-    jpa:
-      database-platform: ${DB_PLATFORM}
-      show-sql: true
+  jpa:
+    hibernate:
+      dialect: ${DB_DIALECT}
+      ddl-auto: update
+    properties:
       hibernate:
-        ddl-auto: update
+        format_sql: true
+    show-sql: true
+
+  jwt:
+    secret: QWxhZGRpbjpvcGVuIHNlc2FtZSBBbGFkZGluOiBvcGVuIHNlc2FtZSBCbGFkZGluOiBvcGVuIHNlc2FtZQ
+    jwtExpirationMs: 315360000
