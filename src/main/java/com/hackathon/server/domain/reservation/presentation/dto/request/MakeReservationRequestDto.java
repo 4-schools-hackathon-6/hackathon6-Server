@@ -10,7 +10,7 @@ public class MakeReservationRequestDto {
     private String day;
     private String time;
     private Boolean repetition;
-    private String x;
-    private String y;
+    private Float x;
+    private Float y;
     private Kind kind;
 }
