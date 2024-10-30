@@ -31,6 +31,7 @@ public class MakeReservationService {
                 .y(dto.getY())
                 .repetition(dto.getRepetition())
                 .type(dto.getType())
+                .radius(dto.getRadius())
                 .user(user)
                 .build();
 
