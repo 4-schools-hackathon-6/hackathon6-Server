@@ -1,8 +1,9 @@
-package com.hackathon.server.domain.call.service;
+package com.hackathon.server.domain.call.service.impl;
 
 import com.hackathon.server.domain.call.domain.Calls;
 import com.hackathon.server.domain.call.presentation.dto.request.CallRequest;
 import com.hackathon.server.domain.call.repository.CallRepository;
+import com.hackathon.server.domain.call.service.CallService;
 import com.hackathon.server.domain.user.entity.User;
 import com.hackathon.server.domain.user.util.UserUtil;
 import lombok.RequiredArgsConstructor;
