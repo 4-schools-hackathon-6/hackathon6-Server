@@ -1,6 +1,6 @@
 package com.hackathon.server.domain.call.service;
 
-import com.hackathon.server.domain.call.domain.Call;
+import com.hackathon.server.domain.call.domain.Calls;
 import com.hackathon.server.domain.call.presentation.dto.request.CallRequest;
 import com.hackathon.server.domain.call.repository.CallRepository;
 import com.hackathon.server.domain.user.entity.User;
@@ -22,7 +22,7 @@ public class CallServiceImpl implements CallService {
     }
 
     private void saveReservation(User user, CallRequest dto) {
-        Call call = Call.builder()
+        Calls calls = Calls.builder()
                 .day(dto.getDay())
                 .time(dto.getTime())
                 .x(dto.getX())
@@ -32,6 +32,6 @@ public class CallServiceImpl implements CallService {
                 .user(user)
                 .build();
 
-        callRepository.save(call);
+        callRepository.save(calls);
     }
 }
