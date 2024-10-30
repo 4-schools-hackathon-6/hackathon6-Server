@@ -27,8 +27,9 @@ public class Reservation {
 
     private Float x;
 
-    private String y;
     private Float y;
+
+    private Float radius;
 
     @Enumerated(EnumType.STRING)
     private Kind kind; // 기기 종류
