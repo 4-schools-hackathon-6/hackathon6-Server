@@ -1,4 +1,4 @@
-package com.hackathon.server.domain.reservation.entity;
+package com.hackathon.server.domain.call.domain;
 
 import com.hackathon.server.domain.user.entity.User;
 import jakarta.persistence.*;
@@ -12,17 +12,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Getter
 @Builder
-public class Reservation {
+public class Calls {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String day; // 예약 날짜
+    private String day;
 
-    private String time; // 예약 시간
-
-    private Boolean repetition; // 매주 반복 여부
+    private String time;
 
     private Float x;
 
@@ -31,7 +29,7 @@ public class Reservation {
     private Float radius;
 
     @Enumerated(EnumType.STRING)
-    private ReservationType type; // 기기 종류
+    private CallType type;
 
     @ManyToOne
     @JoinColumn
