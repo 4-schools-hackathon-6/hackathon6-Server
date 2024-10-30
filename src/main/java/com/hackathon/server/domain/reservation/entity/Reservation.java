@@ -1,6 +1,5 @@
 package com.hackathon.server.domain.reservation.entity;
 
-import ch.qos.logback.core.status.Status;
 import com.hackathon.server.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
