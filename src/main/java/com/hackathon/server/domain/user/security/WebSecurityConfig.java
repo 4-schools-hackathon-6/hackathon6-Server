@@ -63,7 +63,6 @@ public class WebSecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("/user/**").permitAll()
-                                .requestMatchers("/location/**").authenticated()
                                 .requestMatchers("/chatgpt/**").permitAll()
                                 .requestMatchers("device/**").permitAll()
                                 .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
