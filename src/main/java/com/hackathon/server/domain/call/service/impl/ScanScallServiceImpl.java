@@ -9,7 +9,6 @@ import com.hackathon.server.domain.location.repository.LocationRepository;
 import com.hackathon.server.global.exception.BusinessException;
 import com.hackathon.server.global.exception.error.ErrorCode;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,7 +17,6 @@ import java.util.*;
 @Transactional(rollbackFor = Exception.class)
 @Service
 @RequiredArgsConstructor
-@Slf4j
 public class ScanScallServiceImpl implements ScanScallService {
 
     private final CallRepository callRepository;
