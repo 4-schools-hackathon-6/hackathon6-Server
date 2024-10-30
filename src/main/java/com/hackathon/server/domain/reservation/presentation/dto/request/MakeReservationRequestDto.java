@@ -12,5 +12,6 @@ public class MakeReservationRequestDto {
     private Boolean repetition;
     private Float x;
     private Float y;
+    private Float radius;
     private ReservationType type;
 }
