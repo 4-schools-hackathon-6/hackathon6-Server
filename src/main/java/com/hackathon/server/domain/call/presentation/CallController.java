@@ -1,7 +1,9 @@
 package com.hackathon.server.domain.call.presentation;
 
+import com.hackathon.server.domain.call.presentation.dto.request.AcceptRequest;
 import com.hackathon.server.domain.call.presentation.dto.request.CallRequest;
 import com.hackathon.server.domain.call.presentation.dto.response.PushScallReponse;
+import com.hackathon.server.domain.call.service.AcceptService;
 import com.hackathon.server.domain.call.service.CallService;
 import com.hackathon.server.domain.call.service.PushService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -19,6 +21,7 @@ public class CallController {
 
     private final CallService callService;
     private final PushService pushService;
+    private final AcceptService acceptService;
 
     @PostMapping
     public ResponseEntity<Void> makeScall(@RequestBody CallRequest callRequest) {
@@ -30,5 +33,11 @@ public class CallController {
     public ResponseEntity<PushScallReponse> pushScall() {
         PushScallReponse result = pushService.execute();
         return ResponseEntity.ok(result);
+    }
+
+    @PostMapping("/accept")
+    public ResponseEntity<Void> acceptScall(@RequestBody AcceptRequest acceptRequest) {
+        acceptService.execute(acceptRequest);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
