@@ -25,9 +25,10 @@ public class Reservation {
 
     private Boolean repetition; // 매주 반복 여부
 
-    private String x;
+    private Float x;
 
     private String y;
+    private Float y;
 
     @Enumerated(EnumType.STRING)
     private Kind kind; // 기기 종류
