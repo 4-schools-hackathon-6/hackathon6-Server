@@ -66,8 +66,6 @@ public class WebSecurityConfig {
                                 .requestMatchers("/location/**").authenticated()
                                 .requestMatchers("/reservation/**").authenticated()
                                 .requestMatchers("/call/**").authenticated()
-                                .requestMatchers("/chatgpt/**").permitAll()
-                                .requestMatchers("device/**").permitAll()
                                 .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
                                 .anyRequest().permitAll()
                 ).cors((a)-> a.configurationSource(corsConfigurationSource()));
